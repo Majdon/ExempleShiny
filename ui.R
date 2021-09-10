@@ -10,7 +10,7 @@ shinyUI(fluidPage(
     ),
     fluidRow(
         column(3, shiny::tags$div(class = "titleBand", list(selectizeInput("depChoice", "Département", choices = c(1:95), selected = 45, multiple = T),
-                                                            selectInput("sexeChoice", "Sexe", choices = c("Tous" = 0, "Femme" = 1, "Homme" = 2), selected = 0),
+                                                            selectInput("sexeChoice", "Sexe", choices = c("les deux" = 0, "Femme" = 1, "Homme" = 2), selected = 0),
                                                             dateRangeInput("datesRange", "Dates", start = "2020-03-18", end = Sys.Date()-1, min = "2020-03-18", max = Sys.Date()-1, format = "dd/mm/yyyy", language = "fr"),
                                                             hr(),
                                                             actionButton("launchGraph", "Lancer !")))),
